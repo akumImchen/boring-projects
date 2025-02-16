@@ -1,0 +1,271 @@
+/*Primary text-font*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*secondary text-font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*global variables*/
+:root{
+    --primary-text-color:#14213d;
+    --secondary-text-color:#000000;
+    --accent-color1:#2C3930;
+    --accent-color2:#3F4F44;
+    --accent-color3:black;
+    --padding-inline-section:20px;
+}
+body{
+    font-family: "press 2 start", serif;
+    color:var(--primary-text-color);
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style:none;
+
+}
+
+/*Utility Classes*/
+
+.small-bold-text{
+    font-size:10px;/*using px since the 'press2 start font is large*/
+    font-family:"Press Start 2P", serif;
+}
+.container{/*targets the content*/
+    max-width: 1180px;
+    margin-inline:auto;
+    padding-inline: var(--padding-inline-section);
+}
+/*Another utility class for nav bar*/
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-link{
+    color:var(--primary-text-color);
+    transition:0.2s ease-out;
+}
+.hover-link:hover{
+    color: var(--accent-color3);
+}
+.primary-button{
+    background-color:#2C3930;
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color:var(--accent-color2)
+}
+.secondary-button{
+    border: 0.5px solid lightgrey;
+    border-radius: 6px;
+    font-weight: 700;
+    color:var(--primary-text-color) !important;
+    padding:12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    color: var(--accent-color2) !important;
+}
+
+/*for top banner*/
+.top-banner{/* targets the entire banner*/
+    background-color:#2C3930;
+}
+.banner-text{ /*only targets text area of the banner*/
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+/*For nav bar*/
+.main-nav{
+    margin-top: 20px;
+    justify-content: space-between; /*creating space btn logo and links*/
+
+}
+.company-logo img{/*Targetting the image here ;if we target only the class then the image wont be affected only the container willl be */
+    width:200px;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+
+
+/*Header Section*/
+
+header{
+    padding: 50px var(--padding-inline-section);
+}
+.header-section{
+    justify-content: center;
+    gap: 50px;
+}
+.header-left{
+    max-width: 40vw;
+}
+.header-left h1{
+    margin-top: 20px;
+}
+.get-started-btn{
+    margin-top:20px ;
+}
+.header-right img{
+    width: 600px;
+}
+
+
+
+/*Companies Section*/
+.companies-header{
+    text-align: center;
+    margin-block:30px ;
+    color: var(--primary-text-color);
+}
+.logos{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    height: 46px;
+}
+
+/*Features section*/
+
+
+.features-section{
+    padding: 80px var(--padding-inline-section) 0 ;
+    background-image: url(/assets/asset\ 29.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.features-header{
+    text-align: center; 
+}
+.features-header h2{
+    margin-bottom: 20px;
+}
+.features-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.features-card{
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+.features-card img {
+    width: 60px;
+    padding-top: 10px;
+}
+
+/*BIG Features section*/
+.big-feature-section{
+    padding:30px var(--padding-inline-section) ;
+}
+.big-feature-container{
+    gap: 30px;
+}
+.feature-img img{
+    width:100% ;
+}
+.feature-desc{
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* EXAMPLES SECTION*/
+.examples-header{
+    flex-direction: column;
+    gap: 20px;
+}
+.examples-area{
+    justify-content: space-between;
+    margin-block: 30px;
+}
+.examples-card{
+    width: 23%;
+    position:relative;
+    min-height: 300px;
+    background: #000000;
+    background:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)), url(/assets/d1.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s ease-out;
+   
+}
+.examples-card:hover{
+    box-shadow: 0 0 10px #888;
+}
+.card-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+/* CTA SECTION*/
+.cta-section-container{
+    flex-direction: column;
+    gap: 30px;
+    margin-block: 20px;
+    color: white;
+}
+.cta-section{
+    background-color: #14213d;
+    padding: 120px var(--padding-inline-section) 80px;
+}
+.cta-section-container p{
+    color: white;
+}
+/*Footer*/
+footer{
+    padding-block: 80px;
+    background-color:#ade8f4 ;
+}
+.Link-column{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* Sub-fotter*/
+.sub-footer{
+    background-color:#caf0f8;
+   padding:var(--padding-inline-section);
+}
+.sub-footer-container{
+   justify-content: center;
+   gap: 30px;
+}
